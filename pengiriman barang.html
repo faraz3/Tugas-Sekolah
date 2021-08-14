@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td><script>
+                var masukan_nama_pengirim = prompt("masukan nama pengirim")
+                document.write("Nama Pengirim= ")
+                document.write(masukan_nama_pengirim)
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                var masukan_nama_penerima = prompt("Masukan Nama Penerima")
+                document.write("Nama Penerima= ")
+                document.write(masukan_nama_penerima)
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                var Jarak_Pengiriman = prompt("Masukan Jarak Pengiriman (km)")
+                document.write("Jarak Pengiriman= ")
+                document.write(Jarak_Pengiriman)
+                document.write("Km")
+            </script> </td>
+        </tr>
+        <tr>
+            <td><script>
+                var Alamat_Penerima = prompt("Masukan Alamat Penerima")
+            document.write("Alamat Penerima= ")
+            document.write(Alamat_Penerima)
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                var masukan_Jenis_Barang = prompt("Masukan Jenis Barang")
+            document.write("Jenis Barang= ")
+            document.write(masukan_Jenis_Barang)
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                var masukan_Berat_Barang = prompt("Masukan Berat Barang (kg)")
+                document.write("Berat Barang= ")
+                document.write(masukan_Berat_Barang)
+                document.write("Kg")
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                var x = (Jarak_Pengiriman * 10000)
+                var y = (masukan_Berat_Barang *5000)
+                const d = 10/100
+                const e = 5/100
+                var potongan_harga = x * d
+                var z = x + y
+                if(x >= 50000) {
+                    var potongan_harga = x * d
+                    var hasil = x - potongan_harga
+                    document.write("Biaya Pengiriman")
+                    document.write(total)
+                }
+                else {
+                    var potongan_harga = 0
+                    document.write("Biaya Pengiriman= ")
+                    document.write(z)
+                }
+            </script>
+            <script>
+                if(y >= 100000) {
+                    var potongan_barang = y * e
+                } else {
+                    var potongan_barang = 0
+                }
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                document.write("Potongan Jarak Pengiriman= ")
+                document.write(potongan_harga)
+            </script></td>
+        </tr>
+        <tr>
+            <td><script>
+                document.write("Potongan Berat Barang= ")
+                document.write(potongan_barang)
+            </script></td>
+        </tr>
+    </table>
+</body>
+</html>
