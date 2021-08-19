@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+var Bangun_Datar = prompt("masukan salah satu bangun datar Persegi, Persegi Panjang, Lingkaran, Segitiga")
+        if (Bangun_Datar === "Persegi") {
+            function soal(s) {
+            var hasil = (s*s)
+            return hasil
+        }
+
+        var persegi = soal(prompt("masukan sisi"));
+        document.write(persegi)
+    } else if(Bangun_Datar === "Persegi Panjang") {
+            function soal(p,l) {
+            var hasil = (p*l)
+            return hasil
+        }
+
+        var persegi_panjang = soal(prompt("masukan panjang persegi panjang"), prompt("Masukan lebar persegi panjang"));
+        document.write(persegi_panjang)
+        } else if(Bangun_Datar === "Lingkaran") {
+        function soal(r,r) {
+            var hasil = (r * r)*22/7
+            return hasil
+        }
+
+        var Lingkaran = soal(prompt("masukan Jari-Jari"), prompt("Masukan Jari-Jari"))
+        document.write(Lingkaran)
+        } else if(Bangun_Datar === "Segitiga") {
+            function soal(a,t) {
+                var hasil = (a * t)/2
+                return hasil
+            }
+
+            var Segitiga = soal(prompt("masukan alas"), prompt("masukan tinggi"))
+            document.write(Segitiga)
+        }
+    
+    </script>
+</body>
+</html>
