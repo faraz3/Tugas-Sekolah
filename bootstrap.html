@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <!-- <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+            .container{
+                width: 800px;
+            }
+    </style>
+  </head>
+  <body>
+
+    <div class="container">
+        <div class="form-group">
+            <label for="namasiswa">Nama Siswa</label>
+            <input type="text" class="form-control" id="txt_namasiswa">
+          </div>
+
+        <label for="jeniskelamin">Jenis Kelamin </label>
+        <select class="form-control" id="txt_jk">
+        <option value="L">L</option>
+        <option value="P">P</option>
+        </select>
+
+        <label for="kelas">Kelas</label>
+        <select class="form-control" id="txt_kelas">
+        <option value="X">X</option>
+        <option value="XI">XI</option>
+        <option value="XII">XII</option>
+        </select>
+
+        <label for="alamat">Alamat</label>
+        <textarea class="form-control" id="txt_alamat" rows="3"></textarea>
+        
+         <!-- button simpan -->
+        <button type="submit" value="submit" class="btn btn-primary mt-4" onclick="add()"> Simpan </button>
+
+
+
+        <table class="table mt-4">
+            <thead>
+              <tr>
+                <th scope="col">No</th>
+                <th scope="col">Nama Siswa</th>
+                <th scope="col">Jenis Kelamin</th>
+                <th scope="col">Kelas</th>
+                <th scope="col">Alamat</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody id="tampildata">
+            </tbody>
+          </table>
+    </div>
+
+    
+
+    <script>
+        var namasiswa = ['Faraz' , 'Lucy']
+        var jeniskelamin = ['L' , 'L']
+        var kelas = ['XI' , 'XII']
+        var alamat = ['Depok','East Blue']
+
+        var tampil = document.getElementById('tampildata')
+
+        function showData() {
+            tampil.innerHTML = ""
+
+            for(i = 0; i<namasiswa.length; i++){
+                var nodata = i+1
+
+                tampil.innerHTML += "<tr>"+
+                "<td>"+nodata+"</td>"+
+                "<td>"+namasiswa[i]+"</td>"+
+                "<td>"+jeniskelamin[i]+"</td>"+
+                "<td>"+kelas[i]+"</td>"+
+                "<td>"+alamat[i]+"</td>"+
+                "<td>"+
+                  // buttton edit
+                  "<button class='btn btn-warning' onclick='edit("+i+")'> edit </button>"+
+                  // button hapus
+                  "<button class='btn btn-danger' type='return' onclick='delet("+i+")'> Hapus </button> </a>"+
+                "</td>"+
+             "</tr>"
+            }
+        }
+
+            showData()
+
+            // untuk button simpan
+            function add() {
+                var namabaru = document.getElementById('txt_namasiswa').value
+                var jkbaru = document.getElementById('txt_jk').value
+                var kelasbaru = document.getElementById('txt_kelas').value
+                var alamatbaru = document.getElementById('txt_alamat').value
+
+                namasiswa.push(namabaru)
+                jeniskelamin.push(jkbaru)
+                kelas.push(kelasbaru)
+                alamat.push(alamatbaru)
+
+                showData()
+            }
+
+            // Hapus
+            function delet(i) {
+              namasiswa.splice(i , 1)
+              jeniskelamin.splice(i , 1)
+              kelas.splice(i , 1)
+              alamat.splice(i , 1)
+
+              window.alert('data berhasil dihapus')
+
+                showData()
+            }
+
+            // edit
+            function edit(i) {
+              var edit = prompt('Masukan nama baru' , namasiswa[i])
+              namasiswa[i] = edit
+              var edit = prompt('Masukan jenis kelamin bsru' , jeniskelamin[i])
+              jeniskelamin[i] = edit
+              var edit = prompt('Masukan kelas baru' , kelas[i])
+              kelas[i] = edit
+              var edit = prompt('Masukan alama barut' , alamat[i])
+              alamat[i] = edit
+              window.alert('data berhasil diubah')
+
+              showData()
+            }
+
+            
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script> -->
+
+  </body>
+</html>
